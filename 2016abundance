@@ -1,0 +1,342 @@
+library(ggplot2)
+dat <- read.table("PKU2016_abundance.txt", header=T, row.names=1)
+View(dat)
+
+wilcox.test(dat[dat$Group == "PKU",]$Bifidobacterium, dat[dat$Group == "Non-PKU",]$Bifidobacterium)
+
+	###Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Bifidobacterium and dat[dat$Group == "Non-PKU", ]$Bifidobacterium
+W = 74, p-value = 0.1149
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Bifidobacterium,  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$Bifidobacterium, dat[dat$Group == "Non-PKU",]$Bifidobacterium)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Bifidobacterium and dat[dat$Group == "Non-PKU", ]$Bifidobacterium
+W = 74, p-value = 0.1149
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Bifidobacterium,  :
+  cannot compute exact p-value with ties
+> [dat$Group == "PKU", ]$Bifidobacterium
+Error: unexpected '[' in "["
+> wilcox.test(dat[dat$Group == "PKU",]$Bacteroides, dat[dat$Group == "Non-PKU",]$Bacteroides)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Bacteroides and dat[dat$Group == "Non-PKU", ]$Bacteroides
+W = 83, p-value = 0.2328
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Parabacteroides, dat[dat$Group == "Non-PKU",]$Parabacteroides)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Parabacteroides and dat[dat$Group == "Non-PKU", ]$Parabacteroides
+W = 83, p-value = 0.2328
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Alistipes, dat[dat$Group == "Non-PKU",]$Alistipes)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Alistipes and dat[dat$Group == "Non-PKU", ]$Alistipes
+W = 87, p-value = 0.3046
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Faecalibacterium, dat[dat$Group == "Non-PKU",]$Faecalibacterium)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Faecalibacterium and dat[dat$Group == "Non-PKU", ]$Faecalibacterium
+W = 24, p-value = 8.979e-05
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Escherichia, dat[dat$Group == "Non-PKU",]$Escherichia)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Escherichia and dat[dat$Group == "Non-PKU", ]$Escherichia
+W = 114, p-value = 0.9674
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$f_Barnesiellaceae, dat[dat$Group == "Non-PKU",]$f_Barnesiellaceae)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$f_Barnesiellaceae and dat[dat$Group == "Non-PKU", ]$f_Barnesiellaceae
+W = 58, p-value = 0.02063
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$f_Barnesiellaceae,  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$Streptococcus, dat[dat$Group == "Non-PKU",]$Streptococcus)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Streptococcus and dat[dat$Group == "Non-PKU", ]$Streptococcus
+W = 88, p-value = 0.3245
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Clostridium, dat[dat$Group == "Non-PKU",]$Clostridium)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Clostridium and dat[dat$Group == "Non-PKU", ]$Clostridium
+W = 43, p-value = 0.004063
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Clostridium, dat[dat$Group ==  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$SMB53, dat[dat$Group == "Non-PKU",]$SMB53)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$SMB53 and dat[dat$Group == "Non-PKU", ]$SMB53
+W = 52, p-value = 0.01272
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$SMB53, dat[dat$Group ==  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$Blautia, dat[dat$Group == "Non-PKU",]$Blautia)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Blautia and dat[dat$Group == "Non-PKU", ]$Blautia
+W = 123, p-value = 0.6827
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Clostridium.1, dat[dat$Group == "Non-PKU",]$Clostridium.1)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Clostridium.1 and dat[dat$Group == "Non-PKU", ]$Clostridium.1
+W = 122, p-value = 0.713
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Coprococcus, dat[dat$Group == "Non-PKU",]$Coprococcus)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Coprococcus and dat[dat$Group == "Non-PKU", ]$Coprococcus
+W = 98, p-value = 0.5668
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Dorea, dat[dat$Group == "Non-PKU",]$Dorea)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Dorea and dat[dat$Group == "Non-PKU", ]$Dorea
+W = 91, p-value = 0.3892
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Roseburia, dat[dat$Group == "Non-PKU",]$Roseburia)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Roseburia and dat[dat$Group == "Non-PKU", ]$Roseburia
+W = 72, p-value = 0.09753
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Ruminococcus, dat[dat$Group == "Non-PKU",]$Ruminococcus)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Ruminococcus and dat[dat$Group == "Non-PKU", ]$Ruminococcus
+W = 122, p-value = 0.713
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$f_Lachnospiraceae, dat[dat$Group == "Non-PKU",]$f_Lachnospiraceae)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$f_Lachnospiraceae and dat[dat$Group == "Non-PKU", ]$f_Lachnospiraceae
+W = 99, p-value = 0.5949
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Oscillospira, dat[dat$Group == "Non-PKU",]$Oscillospira)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Oscillospira and dat[dat$Group == "Non-PKU", ]$Oscillospira
+W = 83, p-value = 0.2328
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Ruminococcus.1, dat[dat$Group == "Non-PKU",]$Ruminococcus.1)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Ruminococcus.1 and dat[dat$Group == "Non-PKU", ]$Ruminococcus.1
+W = 71, p-value = 0.08919
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Subdoligranulum, dat[dat$Group == "Non-PKU",]$Subdoligranulum)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Subdoligranulum and dat[dat$Group == "Non-PKU", ]$Subdoligranulum
+W = 133, p-value = 0.4124
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$f_Ruminococcaceae, dat[dat$Group == "Non-PKU",]$f_Ruminococcaceae)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$f_Ruminococcaceae and dat[dat$Group == "Non-PKU", ]$f_Ruminococcaceae
+W = 72, p-value = 0.09753
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Dialister, dat[dat$Group == "Non-PKU",]$Dialister)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Dialister and dat[dat$Group == "Non-PKU", ]$Dialister
+W = 86, p-value = 0.2763
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Dialister, dat[dat$Group ==  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$Dialister, dat[dat$Group == "Non-PKU",]$Dialister)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Dialister and dat[dat$Group == "Non-PKU", ]$Dialister
+W = 86, p-value = 0.2763
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Dialister, dat[dat$Group ==  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$Phascolarctobacterium, dat[dat$Group == "Non-PKU",]$Phascolarctobacterium)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Phascolarctobacterium and dat[dat$Group == "Non-PKU", ]$Phascolarctobacterium
+W = 103, p-value = 0.7037
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Phascolarctobacterium,  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$f_Mogibacteriaceae, dat[dat$Group == "Non-PKU",]$f_Mogibacteriaceae)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$f_Mogibacteriaceae and dat[dat$Group == "Non-PKU", ]$f_Mogibacteriaceae
+W = 82.5, p-value = 0.221
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$f_Mogibacteriaceae,  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$o_Clostridiales, dat[dat$Group == "Non-PKU",]$o_Clostridiales)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$o_Clostridiales and dat[dat$Group == "Non-PKU", ]$o_Clostridiales
+W = 79, p-value = 0.1736
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Clostridium.2, dat[dat$Group == "Non-PKU",]$Clostridium.2)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Clostridium.2 and dat[dat$Group == "Non-PKU", ]$Clostridium.2
+W = 97, p-value = 0.5393
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$Eubacterium, dat[dat$Group == "Non-PKU",]$Eubacterium)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$Eubacterium and dat[dat$Group == "Non-PKU", ]$Eubacterium
+W = 104, p-value = 0.7437
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$p_Firmicutes, dat[dat$Group == "Non-PKU",]$p_Firmicutes)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$p_Firmicutes and dat[dat$Group == "Non-PKU", ]$p_Firmicutes
+W = 80, p-value = 0.1873
+alternative hypothesis: true location shift is not equal to 0
+
+> wilcox.test(dat[dat$Group == "PKU",]$f_Enterobacteriaceae, dat[dat$Group == "Non-PKU",]$f_Enterobacteriaceae)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$f_Enterobacteriaceae and dat[dat$Group == "Non-PKU", ]$f_Enterobacteriaceae
+W = 139, p-value = 0.2808
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$f_Enterobacteriaceae,  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$o_RF39, dat[dat$Group == "Non-PKU",]$o_RF39)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$o_RF39 and dat[dat$Group == "Non-PKU", ]$o_RF39
+W = 98.5, p-value = 0.423
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$o_RF39, dat[dat$Group ==  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$Akkermansia, dat[dat$Group == "Non-PKU",]$Akkermansia)
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  dat[dat$Group == "PKU", ]$Akkermansia and dat[dat$Group == "Non-PKU", ]$Akkermansia
+W = 57, p-value = 0.02076
+alternative hypothesis: true location shift is not equal to 0
+
+Warning message:
+In wilcox.test.default(dat[dat$Group == "PKU", ]$Akkermansia, dat[dat$Group ==  :
+  cannot compute exact p-value with ties
+> wilcox.test(dat[dat$Group == "PKU",]$unclassified, dat[dat$Group == "Non-PKU",]$unclassified)
+
+	Wilcoxon rank sum test
+
+data:  dat[dat$Group == "PKU", ]$unclassified and dat[dat$Group == "Non-PKU", ]$unclassified
+W = 68, p-value = 0.0675
+alternative hypothesis: true location shift is not equal to 0
+
+
+#####################################
+-------------------------------------
+##########Building Boxplots##########
+-------------------------------------
+#####################################
+
+library(ggplot2)
+dat <- read.table("PKU2016_abundance.txt", header=T, row.names=1)
+pdf("RA_barneisiellaceae.pdf")
+ggplot(dat, aes(x=dat$Group, y=dat$f_Barnesiellaceae)) + geom_boxplot() + geom_jitter() + theme_classic() + ggtitle("Barnesiellaceae") + theme(plot.title=element_text(hjust=.5)) +xlab("") + ylab("Relative Abundance")
+dev.off()
+
+pdf("RA_clostridium.pdf")
+ggplot(dat, aes(x=dat$Group, y=dat$Clostridium)) + geom_boxplot() + geom_jitter() + theme_classic() + ggtitle("Clostridium") + theme(plot.title=element_text(hjust=.5)) +xlab("") + ylab("Relative Abundance")
+dev.off()
+
+pdf("RA_Faecalibacterium.pdf")
+ggplot(dat, aes(x=dat$Group, y=dat$Faecalibacterium)) + geom_boxplot() + geom_jitter() + theme_classic() + ggtitle("Faecalibacterium") + theme(plot.title=element_text(hjust=.5)) +xlab("") + ylab("Relative Abundance")
+dev.off()
+
+pdf("RA_akkermansia.pdf")
+ggplot(dat, aes(x=dat$Group, y=dat$Akkermansia)) + geom_boxplot() + geom_jitter() + theme_classic() + ggtitle("Akkermansia") + theme(plot.title=element_text(hjust=.5)) +xlab("") + ylab("Relative Abundance")
+dev.off()
+
+pdf("RA_smb53.pdf")
+ggplot(dat, aes(x=dat$Group, y=dat$SMB53)) + geom_boxplot() + geom_jitter() + theme_classic() + ggtitle("SMB53") + theme(plot.title=element_text(hjust=.5)) +xlab("") + ylab("Relative Abundance")
+dev.off()
